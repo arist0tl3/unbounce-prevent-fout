@@ -1,0 +1,14 @@
+<script>
+  let interval;
+  
+  const body = document.getElementsByClassName('lp-pom-body')[0];
+
+  const fontCheck = () => {
+    if (!body || !document.fonts || !document.fonts.check || document.fonts.check('16px Work Sans')) {
+      window.clearInterval(interval);
+      body.style.opacity = 1;
+    }
+  };
+  
+  interval = window.setInterval(fontCheck, 50);
+</script>
